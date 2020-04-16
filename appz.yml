@@ -10,7 +10,7 @@ build:
     image_template: vault-1.2
     image_name: ea-sharedservices/vault
 deploy:
-    context: ea-sharedservices/DEV
+    context: EA-SharedServices/DEV
     replicas: 1
     port:
     - 80
