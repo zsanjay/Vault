@@ -8,18 +8,18 @@ build:
     build_file: none
     output_files: output/*.zip
     image_template: vault-1.2
-    image_name: alpha/vault
+    image_name: ea-sharedservices-dev/vault
 deploy:
-    context: alpha/DEV
+    context: ea-sharedservices-dev/DEV
     replicas: 1
     port:
     - 80
     - 8200
 volumes:
-  - claim: vault-home
+  - claim: vault-home-eass
     mount: /appz/home
     name: home
-  - claim: vault-data
+  - claim: vault-data-eass
     mount: /appz/data
     name: data
 monitor:
