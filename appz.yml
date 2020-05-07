@@ -16,10 +16,10 @@ deploy:
     - 80
     - 8200
 volumes:
-  - claim: vault-home
+  - claim: vault-home-eass
     mount: /appz/home
     name: home
-  - claim: vault-data
+  - claim: vault-data-eass
     mount: /appz/data
     name: data
 monitor:
