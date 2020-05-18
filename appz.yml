@@ -10,16 +10,16 @@ build:
     image_template: vault-1.2
     image_name: alpha/vault
 deploy:
-    context: EA-SharedServices/DEV
+    context: alpha/DEV
     replicas: 1
     port:
     - 80
     - 8200
 volumes:
-  - claim: vault-home-eass
+  - claim: vault-home
     mount: /appz/home
     name: home
-  - claim: vault-data-eass
+  - claim: vault-data
     mount: /appz/data
     name: data
 monitor:
