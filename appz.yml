@@ -2,29 +2,41 @@ app:
     name: Vault
     code: VAULT
     notify: appzdev@cloudbourne.co
+    
 build:
     version: 0.4
     env: DEV
     build_file: none
     output_files: output/*.zip
     image_template: vault-1.2
-    image_name: alpha/vault1
+    image_name: alpha/vault
+    
 deploy:
-    context: EA-SharedServices
+    context: myco/DEV
+    type: statefulset
     replicas: 1
     port:
     - 80
     - 8200
+    
 volumes:
   - claim: vault-home
     mount: /appz/home
     name: home
+    size: 5Gi
+    mode: ReadWriteOnce
+    class: standard
+    matchLabels: false
   - claim: vault-data
     mount: /appz/data
     name: data
+    size: 5Gi
+    mode: ReadWriteOnce
+    class: standard
+    matchLabels: false
+    
 monitor:
     notify: appzops@cloudbourne.co      
+
 properties:
     revision: 25
-    
-  
