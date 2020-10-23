@@ -8,9 +8,9 @@ build:
     build_file: none
     output_files: output/*.zip
     image_template: vault-1.2
-    image_name: alpha/vault1
+    image_name: intelladapt/vault
 deploy:
-    context: EA-SharedServices
+    context: intelladapt/DEV
     replicas: 1
     port:
     - 80
