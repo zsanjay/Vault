@@ -10,7 +10,7 @@ build:
     image_template: vault-1.2
     image_name: intelladapt/vault
 deploy:
-    context: nhpri/DEV
+    context: intelladapt/DEV
     replicas: 1
     port:
     - 80
