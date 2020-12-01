@@ -8,9 +8,9 @@ build:
     build_file: none
     output_files: output/*.zip
     image_template: vault-1.2
-    image_name: alpha/vault1
+    image_name: alpha1/vault1
 deploy:
-    context: EA-SharedServices
+    context: alpha1-dev
     replicas: 1
     port:
     - 80
