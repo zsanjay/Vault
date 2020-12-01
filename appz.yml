@@ -11,6 +11,7 @@ build:
     image_name: alpha/vault1
 deploy:
     context: alpha1/DEV
+    type: statefulset
     replicas: 1
     port:
     - 80
@@ -19,9 +20,15 @@ volumes:
   - claim: vault-home
     mount: /appz/home
     name: home
+    size: 5Gi
+    mode: ReadWriteOnce
+    class: microk8s-hostpath    
   - claim: vault-data
     mount: /appz/data
     name: data
+    size: 5Gi
+    mode: ReadWriteOnce
+    class: microk8s-hostpath  
 monitor:
     notify: appzops@cloudbourne.co      
 properties:
