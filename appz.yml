@@ -10,7 +10,7 @@ build:
     image_template: vault-1.2
     image_name: alpha/vault1
 deploy:
-    context: alpha1-dev
+    context: alpha1/DEV
     replicas: 1
     port:
     - 80
