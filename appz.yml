@@ -10,7 +10,7 @@ build:
     image_template: vault-1.2
     image_name: alpha/vault1
 deploy:
-    context: alpha3/DEV
+    context: alpha4/DEV
     type: statefulset
     replicas: 1
     port:
