@@ -34,8 +34,10 @@ volumes:
     class: microk8s-hostpath  
 
 monitor:
-    notify: appzops@cloudbourne.co      
+    notify: appzops@cloudbourne.co    
+    
 properties:
     revision: 25
+    ENABLE_AUTO_PASSWORD: True
     
   
