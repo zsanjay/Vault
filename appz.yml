@@ -1,7 +1,7 @@
 app:
     name: Vault
     code: VAULT
-    notify: appzdev@cloudbourne.co
+    notify: psganni@ecloudcontrol.com
 
 build:
     version: 0.4
@@ -9,10 +9,10 @@ build:
     build_file: none
     output_files: output/*.zip
     image_template: vault-1.2
-    image_name: alpha/vault
+    image_name: psganni/vault
 
 deploy:
-    context: alpha/DEV
+    context: psganni/DEV
     type: statefulset
     replicas: 1
     port:
@@ -34,7 +34,7 @@ volumes:
     class: microk8s-hostpath  
 
 monitor:
-    notify: appzops@cloudbourne.co    
+    notify: psganni@ecloudcontrol.com    
     
 properties:
     revision: 25
