@@ -37,7 +37,7 @@ monitor:
     notify: psganni@ecloudcontrol.com    
     
 properties:
-    revision: 25
+    revision: 23
     ENABLE_AUTO_PASSWORD: True
     
   
