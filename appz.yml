@@ -12,7 +12,7 @@ build:
     image_name: psganni/vault
 
 deploy:
-    context: psganni/dev
+    context: psganni/DEV
     type: statefulset
     replicas: 1
     port:
