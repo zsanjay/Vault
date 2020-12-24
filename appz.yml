@@ -34,7 +34,7 @@ volumes:
     class: microk8s-hostpath   
 
 properties:
-    revision: 23
+    revision: 24
     ENABLE_AUTO_PASSWORD: True
     
   
