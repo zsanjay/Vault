@@ -16,6 +16,7 @@ deploy:
     replicas: 1
     port:
     - 8200
+    - 80
 
 volumes:
   - claim: vault-home
