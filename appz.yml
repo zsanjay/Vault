@@ -15,7 +15,6 @@ deploy:
     type: statefulset
     replicas: 1
     port:
-    - 80
     - 8200
 
 volumes:
@@ -23,17 +22,12 @@ volumes:
     mount: /appz/home
     name: home
     size: 5Gi
-    mode: ReadWriteOnce
-    class: microk8s-hostpath
   - claim: vault-data
     mount: /appz/data
     name: data
     size: 5Gi
-    mode: ReadWriteOnce
-    class: microk8s-hostpath   
 
 properties:
     revision: 24
     ENABLE_AUTO_PASSWORD: True
     
-  
